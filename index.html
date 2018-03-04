@@ -30,11 +30,11 @@ html {
     position: absolute;
     font-family: avenir-b;
     text-align: center;
-    bottom: 1em;
+    bottom: 2em;
     left: 50%;
     margin-left: -15em;
     width: 30em;
-	font-size:3em;
+	font-size: 3em;
 }
 
 #countdown {
@@ -45,7 +45,11 @@ html {
     left: 50%;
     margin-left: -15em;
     width: 30em;
-	font-size:5em;
+	font-size: 2em;
+}
+
+#countdown span {
+	font-size: 5em;
 }
 </style>
 </head>
@@ -54,14 +58,14 @@ html {
 $(document).ready(function(){ 
 	$('#countdown').countdown('2018/04/14', function(event) {
 	  var $this = $(this).html(event.strftime(''
-		+ '<span>%w</span> veckor '
-		+ '<span>%d</span> dagar '
-		+ '<span>%H</span> timmar '
-		+ '<span>%M</span> minuter '));
+		+ '<span>%w</span> VECKOR '
+		+ '<span>%d</span> DAGAR '
+		+ '<span>%H</span> TIMMAR '
+		+ '<span>%M</span> MINUTER '));
 	});
 });
 </script>
-<div id="caption">FÖRSTA ÖLEN I HONG KONG</div>
 <div id="countdown">...</div>
+<div id="caption">FÖRSTA ÖLEN I HONG KONG</div>
 </body>
 </html>
