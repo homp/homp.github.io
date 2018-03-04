@@ -3,16 +3,6 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.countdown.min.js"></script>
-<script type="text/javascript">
-$('#countdown').countdown('2018/04/14', function(event) {
-  var $this = $(this).html(event.strftime(''
-    + '<span>%w</span> veckor '
-    + '<span>%d</span> dagar '
-    + '<span>%H</span> timmar '
-    + '<span>%M</span> minuter '));
-});
-$('#countdown').html('LOL');
-</script>
 <style>
 @font-face {
 	font-family: planer;
@@ -46,6 +36,15 @@ html {
 </style>
 </head>
 <body>
+<script type="text/javascript">
+$('#countdown').countdown('2018/04/14', function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<span>%w</span> veckor '
+    + '<span>%d</span> dagar '
+    + '<span>%H</span> timmar '
+    + '<span>%M</span> minuter '));
+});
+</script>
 <div id="caption">Första ölen i HONG KONG</div>
 <div id="countdown">...</div>
 </body>
