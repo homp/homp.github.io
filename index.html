@@ -37,13 +37,15 @@ html {
 </head>
 <body>
 <script type="text/javascript">
-$('#countdown').countdown('2018/04/14', function(event) {
-  var $this = $(this).html(event.strftime(''
-    + '<span>%w</span> veckor '
-    + '<span>%d</span> dagar '
-    + '<span>%H</span> timmar '
-    + '<span>%M</span> minuter '));
-});
+$(document).ready(function(){ 
+	$('#countdown').countdown('2018/04/14', function(event) {
+	  var $this = $(this).html(event.strftime(''
+		+ '<span>%w</span> veckor '
+		+ '<span>%d</span> dagar '
+		+ '<span>%H</span> timmar '
+		+ '<span>%M</span> minuter '));
+	});
+}
 </script>
 <div id="caption">Första ölen i HONG KONG</div>
 <div id="countdown">...</div>
