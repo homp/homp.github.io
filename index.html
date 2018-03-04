@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('#countdown').countdown('2018/04/14', function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<span>%w</span> veckor '
+    + '<span>%d</span> dagar '
+    + '<span>%H</span> timmar '
+    + '<span>%M</span> minuter '));
+});
+</script>
 <style>
+@font-face {
+	font-family: planer;
+	src: url('planer.otf');
+}
+
+@font-face {
+	font-family: avenir;
+	src: url('avenir.otf');
+}
+
+@font-face {
+	font-family: avenir-b;
+	src: url('avenir-b.otf');
+}
+
 html {
 	background:url('bg.jpg');
 	background-size:100% 100%;
 	height: 100%;
+	color: #ccc;
+}
+
+#caption {
+	font-family: avenir-b;	
+}
+
+#countdown {
+	font-family: avenir;
 }
 </style>
 </head>
 <body>
-
+<div id="caption">Första ölen i HONG KONG</div>
+<div id="countdown"></div>
 </body>
 </html>
