@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html manifest="./homp.manifest">
 <head>
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<meta name="mobile-web-app-capable" content="yes">
 <meta charset="UTF-8" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.countdown.min.js"></script>
@@ -25,36 +23,39 @@
 }
 
 html {
+	overflow: hidden;
 	background:url('bg.jpg') center center no-repeat;
-	background-size:auto 100%;
+	background-size: cover;
 	height: 100%;
 	color: #ccc;
 }
 
+#container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
 #caption {
-    position: absolute;
-    font-family: avenir-b;
+    position: relative;
+    font-family: avenir;
     text-align: center;
-    bottom: 2em;
-    left: 50%;
-    margin-left: -15em;
-    width: 30em;
-	font-size: 3em;
+    bottom: 0;
+    width: 100%;
+	font-size: 4vw;
 }
 
 #countdown {
-    position: absolute;
-    font-family: avenir;
+    position: relative;
+    font-family: avenir-b;
     text-align: center;
-    bottom: 1em;
-    left: 50%;
-    margin-left: -20em;
-    width: 40em;
-	font-size: 1em;
+    bottom: 0;
+	font-size: 3vw;
 }
 
 #countdown span {
-	font-size: 4em;
+	font-size: 5vw;
 }
 </style>
 </head>
@@ -70,7 +71,9 @@ $(document).ready(function(){
 	});
 });
 </script>
-<div id="countdown">...</div>
-<div id="caption">FÖRSTA ÖLEN I HONG KONG</div>
+<div id="container">
+	<div id="caption">FÖRSTA ÖLEN I HONG KONG</div>
+	<div id="countdown">...</div>
+</div>
 </body>
 </html>
