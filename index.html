@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html manifest="./homp.manifest">
+<html manifest="./homp.manifestss">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 <meta name="mobile-web-app-capable" content="yes">
 <meta charset="UTF-8" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.countdown.min.js"></script>
+<script src="moment.js"></script>
+<script src="moment-timezone-with-data.js"></script>
 <style>
 @font-face {
 	font-family: planer;
@@ -62,7 +64,8 @@ html {
 <body>
 <script type="text/javascript">
 $(document).ready(function(){ 
-	$('#countdown').countdown('2018/04/14', function(event) {
+	var firstBeer = moment.tz("2018-04-14 10:00", "Asia/Hong_Kong");
+	$('#countdown').countdown(firstBeer.toDate(), function(event) {
 	  var $this = $(this).html(event.strftime(''
 		+ '<span>%w</span> VECKOR '
 		+ '<span>%d</span> DAGAR '
