@@ -4,10 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 <meta name="mobile-web-app-capable" content="yes">
 <meta charset="UTF-8" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="jquery.countdown.min.js"></script>
-<script src="moment.js"></script>
-<script src="moment-timezone-with-data.js"></script>
 <style>
 @font-face {
 	font-family: planer;
@@ -26,9 +22,8 @@
 
 html {
 	overflow: hidden;
-	background:url('bg.jpg') center center no-repeat;
-	background-size: cover;
 	height: 100%;
+	background-color: #000;
 	color: #ccc;
 }
 
@@ -62,21 +57,8 @@ html {
 </style>
 </head>
 <body>
-<script type="text/javascript">
-$(document).ready(function(){ 
-	var firstBeer = moment.tz("2018-04-14 10:00", "Asia/Hong_Kong");
-	$('#countdown').countdown(firstBeer.toDate(), function(event) {
-	  var $this = $(this).html(event.strftime(''
-		+ '<span>%w</span> VECKOR '
-		+ '<span>%d</span> DAGAR '
-		+ '<span>%H</span> TIMMAR '
-		+ '<span>%M</span> MINUTER '));
-	});
-});
-</script>
 <div id="container">
-	<div id="caption">FÖRSTA ÖLEN I HONG KONG</div>
-	<div id="countdown"></div>
+
 </div>
 </body>
 </html>
